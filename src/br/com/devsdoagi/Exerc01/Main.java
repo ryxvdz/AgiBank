@@ -1,35 +1,39 @@
 package br.com.devsdoagi.Exerc01;
-import java.util.Arrays;
-
 
 public class Main {
+
     public static void main(String[] args) {
+        double[] resultado = calcularSaldoAnual(20, 40, 100, 10);
 
-
-        double[] precos = {18.50, 16.00, 19.00, 18.00, 10.00, 20.00, 28.00, 22.00, 23.00, 54.00};
-
-
-        int[] trincaAlta = primeiraTrincaAlta(precos);
-
-
-        System.out.println("Primeira trinca de alta: "+ Arrays.toString(trincaAlta));
+        for (int i = 0; i < resultado.length; i++) {
+            System.out.printf("Saldo ao final do ano %d: R$ %.2f\n", (i + 1), resultado[i]);
+        }
     }
 
-    public static int[] primeiraTrincaAlta(double[] precos) {
 
-        for (int i = 0; i <= precos.length - 3; i++) {
-            if (precos[i] < precos[i+1] && precos[i+1] < precos[i+2]) {
+    public static double[] calcularSaldoAnual(int idadeAtual, int idadeAposentadoria,
+                                              double contribuicaoMensal, double taxaDeJurosAnual) {
 
-                return new int[]{i, i + 1, i + 2};
-            }
+        int anosContribuicao = idadeAposentadoria - idadeAtual;
+        double[] vet = new double[anosContribuicao];
+
+
+        double taxaAnualDecimal = taxaDeJurosAnual / 100.0;
+
+        double r = taxaAnualDecimal / 12.0;
+
+
+        for (int i = 0; i < vet.length; i++) {
+            int n = (i + 1) * 12;
+
+
+            double saldoFinalDoAno = contribuicaoMensal * ((Math.pow(1 + r, n) - 1) / r);
+
+            vet[i] = saldoFinalDoAno;
         }
 
-        return null;
+
+
+        return vet;
     }
-
-
-   public static int [] primeiraTendenciaAlta(double[] precos){
-
-    return null;
-   }
 }
