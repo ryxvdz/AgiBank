@@ -8,7 +8,7 @@ public class Produto {
     String nome;
     double preco ;
     int quantidade;
-    int controleQuantidade;
+
 
 
     public void setandoValores(){
@@ -25,17 +25,17 @@ public class Produto {
 
     public void adicionarEstoque(){
         System.out.println("Digite quantos produtos você quer adicionar: ");
-        sc.nextInt(controleQuantidade);
+        int controleQuantidade = sc.nextInt();
         quantidade = quantidade + controleQuantidade;
-        System.out.println("Adicionando: " + this.controleQuantidade+ " produtos no estoque!");
-        System.out.println("Voce tem "+ this.quantidade+" adicionado");
+        System.out.println("Adicionando: " + controleQuantidade+ " produtos no estoque!");
+        System.out.println("Voce tem "+ this.quantidade+" novos produtos adicionado");
     }
 
     public void removerEstoque(){
         System.out.println("Digite quantos produtos você quer remover: ");
-        sc.nextInt(controleQuantidade);
+        int controleQuantidade = sc.nextInt();
         quantidade = quantidade-controleQuantidade;
-        System.out.println(this.controleQuantidade+ " produtos foram removidos do estoque!");
+        System.out.println(controleQuantidade+ " produtos foram removidos do estoque!");
 
     }
 
