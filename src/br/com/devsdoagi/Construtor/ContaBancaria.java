@@ -3,7 +3,7 @@ package br.com.devsdoagi.Construtor;
 public class ContaBancaria {
     private String  nomeTitular;
     private String numeroConta;
-    private double saldo;
+    private Double saldo;
 
 
     public ContaBancaria(String nomeTitular, String numeroConta){
