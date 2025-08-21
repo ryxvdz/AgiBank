@@ -8,8 +8,11 @@ public class Main {
         IPagamento pagamento2 = new PagamentoCartao();
 
 
+
+
         pagamento1.processarPagamento(100);
         pagamento2.processarPagamento(200);
+
 
     }
 }
