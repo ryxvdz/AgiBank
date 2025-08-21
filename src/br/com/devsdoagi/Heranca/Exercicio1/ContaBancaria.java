@@ -6,6 +6,12 @@ public class ContaBancaria {
     protected String numeroDaConta;
     protected Double saldo;
 
+    public ContaBancaria(String titular, String numeroDaConta, Double saldo){
+
+        this.titular= titular;
+        this.numeroDaConta= numeroDaConta;
+        this.saldo= saldo;
+    }
 
     public String getTitular() {
         return titular;
@@ -32,10 +38,4 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public ContaBancaria(String titular, String numeroDaConta, Double saldo){
-
-        this.titular= titular;
-        this.numeroDaConta= numeroDaConta;
-        this.saldo= saldo;
-    }
 }
