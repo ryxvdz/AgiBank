@@ -1,4 +1,4 @@
-package br.com.devsdoagi.Hackathon;
+package Hackathon;
 
 public class ContaCorrente extends Conta{
     public ContaCorrente(String numeroDeConta, double saldo, String titular){

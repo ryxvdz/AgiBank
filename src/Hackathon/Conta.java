@@ -1,4 +1,4 @@
-package br.com.devsdoagi.Hackathon;
+package Hackathon;
 
 abstract class Conta {
 
