@@ -1,4 +1,4 @@
-package br.com.devsdoagi.HackathonCollections;
+package HackathonCollections;
 
 import java.util.ArrayList;
 import java.util.List;

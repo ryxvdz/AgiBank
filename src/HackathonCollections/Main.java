@@ -1,7 +1,4 @@
-package br.com.devsdoagi.HackathonCollections;
-
-import br.com.devsdoagi.HackathonCollections.Cliente;
-import br.com.devsdoagi.HackathonCollections.Conta;
+package HackathonCollections;
 
 import java.util.*;
 
@@ -92,6 +89,7 @@ public class Main {
                 case 8 -> listarClientes(clientes);
                 case 9 -> rodando = false;
                 default -> System.out.println("Opção inválida!");
+
             }
         }
         sc.close();
